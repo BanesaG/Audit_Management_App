@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const findingRoutes = express.Router();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Let Finding = require('./finding.model');
 
@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === "production") {
 require('./routes/api-routes')(app);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongoose.connect(process.env.MONGODB_URI || mongodb://auditmgmt:1234am@ds137483.mlab.com:37483/heroku_78t5nvpt"); 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://auditmgmt:1234am@ds137483.mlab.com:37483/heroku_78t5nvpt"); 
 
 findingRoutes.route('/').get(function(req, res) {
   Finding.find(function(err, findings) {
