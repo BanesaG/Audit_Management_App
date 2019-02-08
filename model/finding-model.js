@@ -19,4 +19,4 @@ let Finding = new Schema({
     }
 });
 
-module.exports = mogoose.model('Finding', Finding);
+module.exports = mongoose.model('Finding', Finding);

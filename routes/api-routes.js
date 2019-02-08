@@ -1,5 +1,5 @@
 // const Note = require('../models/Note');
-const Finding = require('../models/Findings');
+const Finding = require('../model/finding-model');
 
 module.exports = function (app) {
 

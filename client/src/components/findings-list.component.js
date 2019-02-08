@@ -22,7 +22,7 @@ export default class FindingsList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3001/findings/')
+        axios.get('/api/findings')
             .then(response => {
                 this.setState({findings: response.data});
             })
@@ -32,7 +32,7 @@ export default class FindingsList extends Component {
     }
 
     componentDidUpdate() {
-        axios.get('http://localhost:3001/findings/')
+        axios.get('/api/findings')
         .then(response => {
             this.setState({findings: response.data});
         })
