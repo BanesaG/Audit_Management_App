@@ -23,14 +23,15 @@ export default class EditFinding extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/findings'+this.props.match.params.id)
+        axios.get('/api/findings/'+this.props.match.params.id)
             .then(response => {
+                console.log("get response", response.data)
                 this.setState({
-                    finding_clause: response.data.finding_clause,
-                    finding_description: response.data.finding_description,
-                    finding_responsible: response.data.finding_responsible,
-                    finding_priority: response.data.finding_priority,
-                    finding_completed: response.data.finding_completed
+                    finding_clause: response.data[0].finding_clause,
+                    finding_description: response.data[0].finding_description,
+                    finding_responsible: response.data[0].finding_responsible,
+                    finding_priority: response.data[0].finding_priority,
+                    finding_completed: response.data[0].finding_completed
                 })
             })
             .catch(function(error) {
@@ -71,7 +72,7 @@ export default class EditFinding extends Component {
     onSubmit(e) {
         e.preventDefault();
         const obj = {
-            finding_clause: this.state.finding_description,
+            finding_clause: this.state.finding_clause,
             finding_description: this.state.finding_description,
             finding_responsible: this.state.finding_responsible,
             finding_priority: this.state.finding_priority,
@@ -87,13 +88,14 @@ export default class EditFinding extends Component {
         return (
             <div>
                 <h3>Update Finding</h3> {/* correction from Findings to Finding*/}
+
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Clause: </label>
                         <input  type="text"
                                 className="form-control"
-                                value={this.state.finding_description}
-                                onChange={this.onChangeFindingDescription}
+                                value={this.state.finding_clause}
+                                onChange={this.onChangeFindingClause}
                                 />
                     </div>            
                     <div className="form-group">

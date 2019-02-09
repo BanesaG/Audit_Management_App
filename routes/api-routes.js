@@ -13,6 +13,15 @@ module.exports = function (app) {
       });
   });
 
+  app.get('/api/findings/:id', function (req, res) {
+    Finding.find({_id: req.params.id})
+      .then(function (data) {
+        res.json(data);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
+  });
 
   app.post('/api/findings', function (req, res) {
     Finding.create(req.body)

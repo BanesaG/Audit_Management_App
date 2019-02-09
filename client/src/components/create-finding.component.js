@@ -93,13 +93,13 @@ export default class CreateFinding extends Component {
                         <label>Clause: </label>
                         <select className="form-control"  type="text" value={this.state.finding_clause} onChange={this.onChangeFindingClause} >
                                 <option value="Select a clause" ></option>
-                                <option value="4.0">4.0 Context of the Organization</option>
-                                <option value="5.0">5.0 Leadership</option>
-                                <option value="6.0">6.0 Planning of the Quality Management System</option>
-                                <option value="7.0">7.0 Support</option>
-                                <option value="8.0">8.0 Operation</option>
-                                <option value="9.0">9.0 Performance Evaluation</option>
-                                <option value="10.0">10.0 Improvement</option>
+                                <option value="4.0 Context of the Organization">4.0 Context of the Organization</option>
+                                <option value="5.0 Leadership">5.0 Leadership</option>
+                                <option value="6.0 Planning of the Quality Management System">6.0 Planning of the Quality Management System</option>
+                                <option value="7.0 Support">7.0 Support</option>
+                                <option value="8.0 Operation">8.0 Operation</option>
+                                <option value="9.0 Performance Evaluation">9.0 Performance Evaluation</option>
+                                <option value="10.0 Improvement">10.0 Improvement</option>
                                 </select>
                     </div>
 
