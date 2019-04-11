@@ -7,5 +7,7 @@ MERN Audit Management App
 * Express.js
 * React.js
 * Node.js
+* Bootstrap
+* Heroku
 
 # Deploy
