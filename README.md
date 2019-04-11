@@ -1,5 +1,5 @@
 # Audit_Management_App
-MERN Audit Management App
+Full stack MERN Audit Management App
 
 # Dependencies
 
