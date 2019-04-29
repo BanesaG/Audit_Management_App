@@ -1,4 +1,4 @@
-# Audit_Management_App
+# Audit Management App
 Full stack MERN Audit Management App
 
 # Dependencies
